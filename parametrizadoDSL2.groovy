@@ -4,6 +4,7 @@ job('ejemplo3-job-DSL') {
       		git('https://github.com/SRE-Adolfo-MX/jenkins.git', 'master') { node ->
         		node / gitConfigName('Adolfo Del Castillo')
         		node / gitConfigEmail('adolfoing15@hotmail.com')
+                credentials(SRE-Adolfo-MX)
       		}
     	} 
   	parameters {
