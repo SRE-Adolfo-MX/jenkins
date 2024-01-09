@@ -1,13 +1,13 @@
 job('ejemplo3-job-DSL') {
 	description('Job DSL de ejemplo para el curso de Jenkins')
   	scm {
-      		git('https://github.com/macloujulian/jenkins.job.parametrizado.git', 'master') { node ->
+      		git('https://github.com/SRE-Adolfo-MX/jenkins.git', 'master') { node ->
         		node / gitConfigName('Adolfo Del Castillo')
         		node / gitConfigEmail('adolfoing15@hotmail.com')
       		}
     	} 
   	parameters {
-   		stringParam('nombre', defaultValue = 'Julian', description = 'Parametro de cadena para el Job Booleano')
+   		stringParam('nombre', defaultValue = 'Adolfo', description = 'Parametro de cadena para el Job Booleano')
       		choiceParam('planeta', ['Mercurio', 'Venus', 'Tierrra', 'Marte', 'Jupiter', 'Saturno', 'Urano', 'Neptuno'])
       		booleanParam('agente', false)
     	}
